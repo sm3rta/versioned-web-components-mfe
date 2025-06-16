@@ -396,7 +396,7 @@ export const scopedRegistryPolyfill = () => {
 							// If element is a web component
 							if (child.tagName.includes('-')) {
 								const definition = registry._getDefinition(
-									child.tagName.toLowerCase(),
+									child.localName,
 								);
 								if (definition) {
 									customize(child as HTMLElement, definition, true);
